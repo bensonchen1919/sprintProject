@@ -1,7 +1,10 @@
 Name: Benson Chen
 GitHub user: bensonchen1919
-[space for other group member(s)]
-[space for partner(s) GitHub user:]
+
+Name: Gabe Diaz
+GitHub user: gabe-di
+
+**can communicate with Discord, text, socials
 
 communication methods convenient to Benson: Discord, text,
 willing to learn other platforms if it isn't too annoying
@@ -12,10 +15,12 @@ What counts as "done" from Benson: I skimmed through the code for bugs and forma
 Note from Benson: I work some days, should it be appropriate (most likely) I can work on the project before I head off to work. After I get back it is less likely I will be willing to provide aid.
 'Note from Benson' Addendum: I'll try to let my group partner(s) of my shifts the week of. Thus far I have worked on most Mondays.
 
+What's "done" from Gabe: The listed description from Benson is pretty fair and adequate for the completion of assignments. If there is a shift on my own end or if I have something going on, I can let the group know ahead of time.
 [space for partner(s) standards of completion]
 
 Resolving Disagreements (Benson's proposal): If it is about project approaches like the code or whatever, we should discuss which one is the best to go forward with. If they seem equally good or we cannot agree, we can test them both empirically and then decide based on which one is more effective. If there are disagreements on the direction of the project (i.e. significant enough to change the final nature of the project), we should discuss which one to go with. If we still have trouble deciding, we should request input from the professor.
 
+Resolving Disagreements (Gabe): Benson's proposal seems fair and sufficient with me.
 [space for partner(s) preference of resolving disagreements]
 
 Final insurance (Benson): In the event where a group member wishes to withdraw their agreement and participation (after previously agreeing and participating), the other group member(s) ought to be informed
