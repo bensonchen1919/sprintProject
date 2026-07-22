@@ -1,0 +1,24 @@
+{
+  "name": "sprintproject",
+  "version": "1.0.0",
+  "description": "Name: Benson Chen GitHub user: bensonchen1919 [space for other group member(s)] [space for partner(s) GitHub user:]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bensonchen1919/sprintProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/bensonchen1919/sprintProject/issues"
+  },
+  "homepage": "https://github.com/bensonchen1919/sprintProject#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
