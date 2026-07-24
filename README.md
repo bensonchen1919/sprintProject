@@ -9,8 +9,6 @@ GitHub user: gabe-di
 communication methods convenient to Benson: Discord, text,
 willing to learn other platforms if it isn't too annoying
 
-[space for partner(s) communcation preference]
-
 What counts as "done" from Benson: I skimmed through the code for bugs and formatting. We should do our best to resolve issues with code, and if it is unable to be resolved by either of us make a note of it. Time able, the person who shall submit the part will be responsible for asking the professor about bugs and errors (as to avoid sending duplicate requests).
 Note from Benson: I work some days, should it be appropriate (most likely) I can work on the project before I head off to work. After I get back it is less likely I will be willing to provide aid.
 'Note from Benson' Addendum: I'll try to let my group partner(s) of my shifts the week of. Thus far I have worked on most Mondays.
