@@ -22,3 +22,6 @@ Resolving Disagreements (Gabe): Benson's proposal seems fair and sufficient with
 [space for partner(s) preference of resolving disagreements]
 
 Final insurance (Benson): In the event where a group member wishes to withdraw their agreement and participation (after previously agreeing and participating), the other group member(s) ought to be informed
+
+Synopsis on Sprint 1 work (Benson):
+Made package.json, package-lock.json, and server.js, as well as a .gitignore to smoothen adding and pushing. Within my server.js I began to make the very rudimentary foundations of my code. The default path "/" should lead to what is the front page and where the player would start their adventure. For the moment I am using a simpler method wherein the message and link is contained within the code, however definitely will not be the way it will be scaled up, it just doesn't seem practical to make an ejs for a single response right now. I did however make an ejs for the starting page, though it is not currently in use.
