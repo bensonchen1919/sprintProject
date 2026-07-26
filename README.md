@@ -19,3 +19,22 @@ Final insurance (Benson): In the event where a group member wishes to withdraw t
 Synopsis on Sprint 1 work (Benson): Made package.json, package-lock.json, and server.js, as well as a .gitignore to smoothen adding and pushing. Within my server.js I began to make the very rudimentary foundations of my code. The default path "/" should lead to what is the front page and where the player would start their adventure. For the moment I am using a simpler method wherein the message and link is contained within the code, however definitely will not be the way it will be scaled up, it just doesn't seem practical to make an ejs for a single response right now. I did however make an ejs for the starting page, though it is not currently in use.
 
 Synopsis on Sprint 2 work (Benson 7/25/26): Made the ejs files that will be used in the get requests.
+Currently, the ejs files looks something like so:
+views
+|-- partials
+|   |-- job_assignment
+|   |   |-- last_decision
+|   |   |   |-- absolute.ejs
+|   |   |   |-- attendents.ejs
+|   |   |   |-- enforcement.ejs
+|   |   |   |-- justice.ejs
+|   |   |   |-- manufacturing.ejs
+|   |   |   |-- mining.ejs
+|   |   |   |-- research.ejs
+|   |   |   |-- utopia.ejs
+|   |   |-- improve.ejs
+|   |   |-- order.ejs
+|   |   |-- productivity.ejs
+|   |   |-- serve.ejs
+|   |-- agent.ejs
+|-- start.ejs
