@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>AI dev game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development Game</title>
 </head>
 <body>
-    <h1>What kind of AI do you want to build?</h1>
-    <p>Choose the primary focus of the model you’ll develop.</p>
+    <% if (typeof player !== "undefined" && player) { %>
+        <h1>Welcome, <%= player.name %>.</h1>
+    <% } %>
+
+    <h2>What kind of AI do you want to build?</h2>
+    <p>Choose the primary focus of the model you'll develop.</p>
 
     <ul>
         <li>
@@ -14,22 +20,25 @@
                 <span>Create text, images, code, audio, and more</span>
             </a>
         </li>
+
         <li>
             <a href="/pr">
-                <strong>Pattern Recognition & Analysis</strong>
+                <strong>Pattern Recognition &amp; Analysis</strong>
                 <span>Find signals in large datasets and make sense of complex data</span>
             </a>
         </li>
+
         <li>
             <a href="/assistant">
                 <strong>Personal Assistant</strong>
-                <span>Help a human in real time with tasks, learning, and decisions</span>
+                <span>Help a human in real time with tasks, learning               </span>
             </a>
         </li>
+
         <li>
             <a href="/agent">
                 <strong>Autonomous Agent</strong>
-                <span>Act independently toward goals with less constant supervision</span>
+                < pan>Act independently toward goals with less constant supervision</span>
             </a>
         </li>
     </ul>

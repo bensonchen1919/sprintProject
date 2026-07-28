@@ -1,24 +1,44 @@
-import express from 'express';
+import express from "express";
+import playerRoutes from "./routes/playerRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.set('view engine', 'ejs');
-app.set('views', 'views');
+app.set("view engine", "ejs");
+app.set("views", "views");
 
-app.get("/", (req, res) => {
-  res.render("start");
-});
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
+app.use("/", playerRoutes);
 
 app.get("/hello", (req, res) => {
-  res.send("<h1>Hello World!</h1>");
+  res.send("Hello, world!");
 });
 
 app.get("/greetings", (req, res) => {
-  res.send("<h1>Greetings Planet!</h1>");
+  res.send("Greetings from the AI development game!");
 });
 
+app.get("/agent", (req, res) => {
+  res.render("partials/agent");
+});
+
+app.get("/productivity", (req, res) => {
+  res.render("partials/job_assignment/productivity");
+});
+
+app.get("/serve", (req, res) => {
+  res.render("partials/job_assignment/serve");
+});
+
+app.get("/order", (req, res) => {
+  res.render("partials/job_assignment/order");
+});
+
+app.get("/improve", (req, res) => {
+  res.render("partials/job_assignment/improve");
+});
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
