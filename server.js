@@ -28,6 +28,14 @@ app.get("/productivity", (req, res) => {
   res.render("partials/job_assignment/productivity");
 });
 
+app.get("/manufacturing", (req, res) => {
+  res.render("partials/job_assignment/last_decision/manufacturing");
+});
+
+app.get("/4-1-1-1", (req, res) => {
+  res.render("partials/job_assignment/last_decision/ok_ends/4-1-1-1");
+});
+
 app.get("/serve", (req, res) => {
   res.render("partials/job_assignment/serve");
 });
@@ -38,6 +46,18 @@ app.get("/order", (req, res) => {
 
 app.get("/improve", (req, res) => {
   res.render("partials/job_assignment/improve");
+});
+
+app.get("/assistant", (req, res) => {
+  res.render("partials/assistant");
+});
+
+app.get("/generative", (req, res) => {
+  res.render("partials/generative");
+});
+
+app.get("/pr", (req, res) => {
+  res.render("partials/pr");
 });
 
 app.listen(PORT, () => {
