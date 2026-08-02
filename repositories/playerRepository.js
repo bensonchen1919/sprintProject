@@ -1,20 +1,28 @@
-import { readFile, writeFile } from "fs/promises";
-
-const playersFile = new URL("../data/players.json", import.meta.url);
+import Player from "../models/Player.js";
 
 export async function getAllPlayers() {
-  const data = await readFile(playersFile, "utf-8");
-  return JSON.parse(data);
+  return Player.find().sort({ createdAt: -1 });
 }
 
-export async function savePlayer(player) {
-  const players = await getAllPlayers();
-  players.push(player);
+export async function findPlayerById(id) {
+  return Player.findById(id);
+}
 
-  await writeFile(
-    playersFile,
-    JSON.stringify(players, null, 2)
+export async function createPlayer(playerData) {
+  return Player.create(playerData);
+}
+
+export async function updatePlayerById(id, updates) {
+  return Player.findByIdAndUpdate(
+    id,
+    updates,
+    {
+      new: true,
+      runValidators: true
+    }
   );
+}
 
-  return player;
+export async function removePlayerById(id) {
+  return Player.findByIdAndDelete(id);
 }
