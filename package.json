@@ -4,7 +4,7 @@
   "description": "Name: Benson Chen GitHub user: bensonchen1919 [space for other group member(s)] [space for partner(s) GitHub user:]",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "start": "node server.js"
   },
   "repository": {
@@ -24,5 +24,8 @@
     "ejs": "^6.0.1",
     "express": "^5.2.1",
     "mongoose": "^9.9.1"
+  },
+  "devDependencies": {
+    "jest": "^30.4.2"
   }
 }
