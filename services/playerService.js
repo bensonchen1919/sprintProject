@@ -1,6 +1,7 @@
 import {
-  getAllPlayers,
-  savePlayer
+  createPlayer as createPlayerRecord,
+  findPlayerById,
+  updatePlayerById
 } from "../repositories/playerRepository.js";
 
 export async function createPlayer(name) {
@@ -18,15 +19,45 @@ export async function createPlayer(name) {
     throw new Error("Player name must be 30 characters or fewer.");
   }
 
-  const players = await getAllPlayers();
-
-  const player = {
-    id: players.length
-      ? Math.max(...players.map((existingPlayer) => existingPlayer.id)) + 1
-      : 1,
+  return createPlayerRecord({
     name: cleanedName,
-    createdAt: new Date().toISOString()
-  };
+    achievements: [],
+    endingsReached: []
+  });
+}
 
-  return savePlayer(player);
+export async function getPlayerById(id) {
+  if (!id) {
+    throw new Error("Player ID is required.");
+  }
+
+  const player = await findPlayerById(id);
+
+  if (!player) {
+    throw new Error("Player not found.");
+  }
+
+  return player;
+}
+
+export async function addEndingToPlayer(playerId, endingId) {
+  if (!playerId) {
+    throw new Error("Player ID is required.");
+  }
+
+  const cleanedEndingId = endingId?.trim();
+
+  if (!cleanedEndingId) {
+    throw new Error("Ending ID is required.");
+  }
+
+  const player = await getPlayerById(playerId);
+
+  const endingsReached = player.endingsReached.includes(cleanedEndingId)
+    ? player.endingsReached
+    : [...player.endingsReached, cleanedEndingId];
+
+  return updatePlayerById(playerId, {
+    endingsReached
+  });
 }

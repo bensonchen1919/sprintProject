@@ -4,8 +4,9 @@
   "description": "Name: Benson Chen GitHub user: bensonchen1919 [space for other group member(s)] [space for partner(s) GitHub user:]",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "start": "node server.js",
+    "build-css": "npx @tailwindcss/cli -i ./public/css/input.css -o ./public/css/output.css"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,14 @@
   },
   "homepage": "https://github.com/bensonchen1919/sprintProject#readme",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "ejs": "^6.0.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongoose": "^9.9.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "jest": "^30.4.2",
+    "tailwindcss": "^4.3.3"
   }
 }

@@ -38,3 +38,71 @@ views
 |   |   |-- serve.ejs
 |   |-- agent.ejs
 |-- start.ejs
+
+## Sprint 3 Summary (8/2/2026, Gabe)
+
+### Features Added
+
+- Replaced JSON player storage with MongoDB using Mongoose.
+- Added persistent player records with achievements and unlocked endings.
+- Added mocked Jest tests for the player service (`npm test`).
+- Added an HTMX progress map that updates without a full-page reload.
+- Added responsive Tailwind CSS styling to the main pages.
+
+### Running the Project
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Create a `.env` file:
+
+```text
+MONGODB_URI=mongodb://127.0.0.1:27018/ai-development-game
+```
+
+3. Start the local MongoDB Docker container:
+
+```bash
+docker start sprint-project-mongo
+```
+
+4. Build the Tailwind stylesheet:
+
+```bash
+npm run build-css
+```
+
+5. Start the server:
+
+```bash
+npm start
+```
+
+6. Run tests:
+
+```bash
+npm test
+```
+
+### System Diagram
+
+```
+Browser
+   |
+EJS Views
+   |
+Routes
+   |
+Controllers
+   |
+Services <---- Jest Tests
+   |
+Repositories
+   |
+Mongoose
+   |
+MongoDB
+```

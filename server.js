@@ -1,3 +1,5 @@
+import "dotenv/config";
+import { connectDatabase } from "./config/database.js";
 import express from "express";
 import playerRoutes from "./routes/playerRoutes.js";
 
@@ -9,6 +11,7 @@ app.set("views", "views");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
 
 app.use("/", playerRoutes);
 
@@ -25,27 +28,27 @@ app.get("/agent", (req, res) => {
 });
 
 app.get("/productivity", (req, res) => {
-  res.render("partials/job_assignment/productivity");
+  res.render("partials/agent/productivity");
 });
 
 app.get("/manufacturing", (req, res) => {
-  res.render("partials/job_assignment/last_decision/manufacturing");
+  res.render("partials/agent/productivity/manufacturing");
 });
 
 app.get("/4-1-1-1", (req, res) => {
-  res.render("partials/job_assignment/last_decision/ok_ends/4-1-1-1");
+  res.render("partials/agent/productivity/manufacturing/4-1-1-1");
 });
 
 app.get("/serve", (req, res) => {
-  res.render("partials/job_assignment/serve");
+  res.render("partials/agent/serve");
 });
 
 app.get("/order", (req, res) => {
-  res.render("partials/job_assignment/order");
+  res.render("partials/agent/order");
 });
 
 app.get("/improve", (req, res) => {
-  res.render("partials/job_assignment/improve");
+  res.render("partials/agent/improve");
 });
 
 app.get("/assistant", (req, res) => {
@@ -60,6 +63,18 @@ app.get("/pr", (req, res) => {
   res.render("partials/pr");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-});
+
+async function startServer() {
+  try {
+    await connectDatabase();
+
+    app.listen(PORT, () => {
+      console.log(`Server running at http://localhost:${PORT}`);
+    });
+  } catch (error) {
+    console.error("Unable to start server:", error.message);
+    process.exit(1);
+  }
+}
+
+startServer();
