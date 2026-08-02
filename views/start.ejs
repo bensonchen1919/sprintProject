@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Development Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"></script>
 </head>
 <body>
     <% if (typeof player !== "undefined" && player) { %>
@@ -31,7 +32,7 @@
         <li>
             <a href="/assistant">
                 <strong>Personal Assistant</strong>
-                <span>Help a human in real time with tasks, learning               </span>
+                <span>Help a human in real time with tasks, learning, and decisions</span>
             </a>
         </li>
 
@@ -42,5 +43,16 @@
             </a>
         </li>
     </ul>
+
+    <% if (typeof player !== "undefined" && player) { %>
+        <section
+            id="progress-map"
+            hx-get="/players/<%= player._id %>/map"
+            hx-trigger="load"
+            hx-swap="outerHTML"
+        >
+            <p>Loading progress map...</p>
+        </section>
+    <% } %>
 </body>
 </html>
