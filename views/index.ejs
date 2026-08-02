@@ -4,29 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Development Game</title>
+    <link rel="stylesheet" href="/css/output.css">
 </head>
-<body>
-    <h1>Welcome to the AI Development Game</h1>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+    <main class="mx-auto flex min-h-screen max-w-2xl items-center px-4 py-10 sm:px-8">
+        <section class="w-full rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-lg sm:p-10">
+            <p class="mb-2 text-sm font-medium uppercase tracking-widest text-indigo-400">
+                AI Development Simulation
+            </p>
 
-    <p>Enter your name to begin the simulation.</p>
+            <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
+                Welcome to the AI Development Game
+            </h1>
 
-    <% if (error) { %>
-        <p><strong><%= error %></strong></p>
-    <% } %>
+            <p class="mt-4 text-slate-300">
+                Enter your name to begin the simulation and track the endings you unlock.
+            </p>
 
-    <form action="/players" method="POST">
-        <label for="name">Player name:</label>
+            <% if (error) { %>
+                <div
+                    role="alert"
+                    class="mt-6 rounded-lg border border-red-500/50 bg-red-950/40 px-4 py-3 text-red-200"
+                >
+                    <strong><%= error %></strong>
+                </div>
+            <% } %>
 
-        <input
-            type="text"
-            id="name"
-            name="name"
-            value="<%= previousName %>"
-            maxlength="30"
-            required
-        >
+            <form action="/players" method="POST" class="mt-8 space-y-5">
+                <div>
+                    <label
+                        for="name"
+                        class="mb-2 block text-sm font-medium text-slate-200"
+                    >
+                        Player name
+                    </label>
 
-        <button type="submit">Begin Simulation</button>
-    </form>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value="<%= previousName %>"
+                        maxlength="30"
+                        required
+                        autocomplete="name"
+                        class="w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-base text-white placeholder-slate-500 outline-none transition focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/30"
+                        placeholder="Enter your name"
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="w-full rounded-lg bg-indigo-600 px-5 py-3 font-semibold text-white transition hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-300 sm:w-auto"
+                >
+                    Begin Simulation
+                </button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
