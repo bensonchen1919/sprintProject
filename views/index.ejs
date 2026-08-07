@@ -8,6 +8,18 @@
 </head>
 <body class="min-h-screen bg-slate-950 text-slate-100">
     <main class="mx-auto flex min-h-screen max-w-2xl items-center px-4 py-10 sm:px-8">
+
+            <nav aria-label="Account controls" class="mb-6 flex justify-end">
+                <form action="/logout" method="POST">
+                    <button
+                        type="submit"
+                        class="rounded-lg border border-slate-600 bg-slate-800 px-4 py-2 font-medium text-white transition hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                    >
+                        Log out
+                    </button>
+                </form>
+            </nav>
+
         <section class="w-full rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-lg sm:p-10">
             <p class="mb-2 text-sm font-medium uppercase tracking-widest text-indigo-400">
                 AI Development Simulation

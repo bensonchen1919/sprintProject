@@ -13,7 +13,7 @@ export function showPlayerForm(req, res) {
 
 export async function handleCreatePlayer(req, res) {
   try {
-    const player = await createPlayer(req.body.name);
+    const player = await createPlayer(req.body.name, req.session.user.id);
 
     res.render("start", {
       player
@@ -42,13 +42,16 @@ export async function unlockEnding(req, res) {
   try {
     const player = await addEndingToPlayer(
       req.params.playerId,
-      req.params.endingId
+      req.params.endingId,
+      req.session.user
     );
 
     res.render("partials/playerProgressMap", {
       player
     });
   } catch (error) {
-    res.status(400).send(`<p>${error.message}</p>`);
+    res
+      .status(error.status ?? 400)
+      .send(`<p>${error.message}</p>`);
   }
 }

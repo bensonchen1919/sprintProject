@@ -1,11 +1,16 @@
+import mongoose from "mongoose";
 import {
   createPlayer as createPlayerRecord,
   findPlayerById,
   updatePlayerById
 } from "../repositories/playerRepository.js";
 
-export async function createPlayer(name) {
+export async function createPlayer(name, ownerId) {
   const cleanedName = name?.trim();
+
+  if (!ownerId) {
+    throw new Error("Player owner is required.");
+  }
 
   if (!cleanedName) {
     throw new Error("Player name is required.");
@@ -20,6 +25,7 @@ export async function createPlayer(name) {
   }
 
   return createPlayerRecord({
+    ownerId,
     name: cleanedName,
     achievements: [],
     endingsReached: []
@@ -31,6 +37,10 @@ export async function getPlayerById(id) {
     throw new Error("Player ID is required.");
   }
 
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    throw new Error("Player not found.");
+  } 
+
   const player = await findPlayerById(id);
 
   if (!player) {
@@ -40,7 +50,25 @@ export async function getPlayerById(id) {
   return player;
 }
 
-export async function addEndingToPlayer(playerId, endingId) {
+function isOwnerOrAdmin(player, currentUser) {
+  if (!currentUser) {
+    return false;
+  }
+
+  const isOwner =
+    player.ownerId.toString() === currentUser.id;
+
+  const isAdmin =
+    currentUser.role === "admin";
+
+  return isOwner || isAdmin;
+}
+
+export async function addEndingToPlayer(
+  playerId,
+  endingId,
+  currentUser
+) {
   if (!playerId) {
     throw new Error("Player ID is required.");
   }
@@ -52,6 +80,15 @@ export async function addEndingToPlayer(playerId, endingId) {
   }
 
   const player = await getPlayerById(playerId);
+
+  if (!isOwnerOrAdmin(player, currentUser)) {
+    const error = new Error(
+      "You are not allowed to modify this player."
+    );
+
+    error.status = 403;
+    throw error;
+  }
 
   const endingsReached = player.endingsReached.includes(cleanedEndingId)
     ? player.endingsReached

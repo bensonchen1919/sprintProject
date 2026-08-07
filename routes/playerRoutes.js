@@ -1,4 +1,5 @@
 import express from "express";
+import { requireLogin } from "../middleware/requireLogin.js";
 import {
   showPlayerForm,
   handleCreatePlayer,
@@ -8,16 +9,23 @@ import {
 
 const router = express.Router();
 
-router.get("/", showPlayerForm);
-router.post("/players", handleCreatePlayer);
+router.get("/", requireLogin, showPlayerForm);
+
+router.post(
+  "/players",
+  requireLogin,
+  handleCreatePlayer
+);
 
 router.get(
   "/players/:playerId/map",
+  requireLogin,
   showProgressMap
 );
 
 router.post(
   "/players/:playerId/endings/:endingId",
+  requireLogin,
   unlockEnding
 );
 
