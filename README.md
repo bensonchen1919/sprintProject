@@ -122,8 +122,89 @@ Mongoose
 MongoDB
 ```
 
+minor change (08/06/20206)
+
+Added more ejs files and changed the agent.ejs so that it hopefully matches with the standard set by start.ejs. I am not able to test the server at the moment due to changes elsewhere in the project but if it works I'll go ahead and edit other files to match.
 
 
-if caranchoa = Culaso Gordo,
-Then caranchoa = Plants a lot;
-##Very Functional Function by Dianuchang :)
+## Sprint 4 Summary (08/07/2026, Gabe)
+
+### Authentication
+
+The project now uses `bcrypt` to hash passwords and `express-session` with `connect-mongo` to store sessions in MongoDB. Users can sign up at `/signup`, log in at `/login`, and log out with the visible logout button.
+
+New accounts are always assigned the `member` role by the server. The application supports `member` and `admin` roles, and the signup form cannot select a role.
+
+### Authorization
+
+Player records now include an `ownerId`.
+
+Protected player routes use `requireLogin` to verify that a user is authenticated. After the requested player is loaded, the player service checks whether the current user owns the player or has the `admin` role.
+
+Testing confirmed:
+
+- Player owner: allowed
+- Different member: HTTP `403`
+- Admin: allowed
+
+### Accessibility Audit
+
+The login, signup, and player forms use real `<label>` elements for their inputs. Interactive controls have visible keyboard focus styles, and logout can be used without a mouse.
+
+The HTMX progress map moves focus to its updated heading after a dynamic swap so keyboard focus does not silently disappear.
+
+Primary text, button, and hover colors were checked against the WCAG AA 4.5:1 contrast requirement.
+
+### Health Check
+
+`GET /health` is public and does not require authentication.
+
+It returns:
+
+```json
+{ "status": "ok" }
+```
+
+### Updated System Diagram
+
+```text
+Browser
+   |
+   | Signup / Login / Logout
+   | Full-page + HTMX requests
+   v
+EJS Views
+   |
+   v
+Routes
+   |
+   +---- requireLogin
+   |
+   v
+Controllers
+   |
+   v
+Services <------------- Jest Tests
+   |
+   +---- Validation
+   +---- Owner/Admin Authorization
+   |
+   v
+Repositories
+   |
+   +---- User Repository
+   +---- Player Repository
+   |
+   v
+Mongoose Models
+   |
+   +---- User
+   +---- Player
+   |
+   v
+MongoDB
+   |
+   +---- Application Data
+   +---- Session Store
+```
+
