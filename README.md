@@ -106,3 +106,7 @@ Mongoose
    |
 MongoDB
 ```
+
+## (8/6/2026) minor change
+
+Added more ejs files and changed the agent.ejs so that it hopefully matches with the standard set by start.ejs. I am not able to test the server at the moment due to changes elsewhere in the project but if it works I'll go ahead and edit other files to match.
