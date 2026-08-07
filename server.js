@@ -3,6 +3,10 @@ import { connectDatabase } from "./config/database.js";
 import express from "express";
 import playerRoutes from "./routes/playerRoutes.js";
 
+import session from "express-session";
+import MongoStore from "connect-mongo";
+import authRoutes from "./routes/authRoutes.js";
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -13,7 +17,29 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET ?? "development-secret-change-me",
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({
+      mongoUrl: process.env.MONGODB_URI
+    }),
+    cookie: {
+      httpOnly: true,
+      sameSite: "lax",
+      secure: false,
+      maxAge: 1000 * 60 * 60 * 24
+    }
+  })
+);
+
+app.use("/", authRoutes);
 app.use("/", playerRoutes);
+
+app.get("/health", (req, res) => {
+  res.json({ status: "ok" });
+});
 
 app.get("/hello", (req, res) => {
   res.send("Hello, world!");
@@ -62,7 +88,6 @@ app.get("/generative", (req, res) => {
 app.get("/pr", (req, res) => {
   res.render("partials/pr");
 });
-
 
 async function startServer() {
   try {

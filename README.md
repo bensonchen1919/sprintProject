@@ -63,12 +63,27 @@ npm install
 MONGODB_URI=mongodb://127.0.0.1:27018/ai-development-game
 ```
 
-3. Start the local MongoDB Docker container:
+3. Create the MongoDB container (first time only):
+
+```bash
+docker run -d \
+  --name sprint-project-mongo \
+  -p 27018:27017 \
+  -v sprint-project-mongo-data:/data/db \
+  mongo:7
+```
+
+If the container already exists, start it with:
 
 ```bash
 docker start sprint-project-mongo
 ```
 
+4. Build the Tailwind stylesheet:
+
+```bash
+npm run build-css
+```
 4. Build the Tailwind stylesheet:
 
 ```bash
@@ -106,3 +121,9 @@ Mongoose
    |
 MongoDB
 ```
+
+
+
+if caranchoa = Culaso Gordo,
+Then caranchoa = Plants a lot;
+##Very Functional Function by Dianuchang :)
