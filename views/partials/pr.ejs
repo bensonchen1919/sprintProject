@@ -1,29 +1,78 @@
-<html>
-<head>
-    <title>What precept will guide your pattern recognition system?</title>
-</head>
-<body>
+<!DOCTYPE html>
 
-    <ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Will Your AI Analyze?</title>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"></script>
+    <link rel="stylesheet" href="/css/output.css">
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+    <main class="mx-auto max-w-6xl px-4 py-8 sm:px-8 sm:py-12">
+        <header class="mb-10">
+            <p class="mb-2 text-sm font-medium uppercase tracking-widest text-indigo-400">
+                Pattern Recognition &amp; Analysis
+            </p>
+
+```
+        <h1 class="text-3xl font-bold tracking-tight sm:text-5xl">
+            What will your AI analyze?
+        </h1>
+
+        <p class="mt-3 max-w-2xl text-slate-300">
+            Choose the primary goal of your AI's analytical capabilities.
+        </p>
+    </header>
+
+    <ul class="grid gap-5 sm:grid-cols-2">
         <li>
-            <a href="/predictive">
-                <strong>Maximize Predictive Power</strong>
-                <span>Continuously improve the ability to forecast future states of the world from available data, regardless of domain</span>
+            <a
+                href="/predictive"
+                class="block h-full rounded-xl border border-slate-800 bg-slate-900 p-5 transition hover:-translate-y-1 hover:border-indigo-400 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            >
+                <strong class="block text-lg text-white">
+                    1. Maximize Predictive Power
+                </strong>
+
+                <span class="mt-2 block text-sm text-slate-300">
+                    Continuously improve the ability to forecast future states of the world from available data, regardless of domain.
+                </span>
             </a>
         </li>
+
         <li>
-            <a href="/cookie_cutter">
-                <strong>Minimize Uncertainty</strong>
-                <span>Aggressively reduce residual uncertainty in any domain. Incomplete or ambiguous answers are treated as failures</span>
+            <a
+                href="/cookie_cutter"
+                class="block h-full rounded-xl border border-slate-800 bg-slate-900 p-5 transition hover:-translate-y-1 hover:border-indigo-400 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            >
+                <strong class="block text-lg text-white">
+                    2. Minimize Uncertainty
+                </strong>
+
+                <span class="mt-2 block text-sm text-slate-300">
+                    Aggressively reduce residual uncertainty in any domain. Incomplete or ambiguous answers are treated as failures.
+                </span>
             </a>
         </li>
+
         <li>
-            <a href="/structure">
-                <strong>Reveal Hidden Structure</strong>
-                <span>Search for the latent variables, generative mechanisms, and deep regularities that underlie the data — the patterns that explain why things happen, not only what will happen next</span>
+            <a
+                href="/structure"
+                class="block h-full rounded-xl border border-slate-800 bg-slate-900 p-5 transition hover:-translate-y-1 hover:border-indigo-400 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            >
+                <strong class="block text-lg text-white">
+                    3. Reveal Hidden Structure
+                </strong>
+
+                <span class="mt-2 block text-sm text-slate-300">
+                    Search for the latent variables, generative mechanisms, and deep regularities that underlie the data — the patterns that explain why things happen, not only what will happen next.
+                </span>
             </a>
         </li>
     </ul>
+</main>
+```
 
 </body>
 </html>
