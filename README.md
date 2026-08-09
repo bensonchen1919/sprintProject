@@ -208,3 +208,4 @@ MongoDB
    +---- Application Data
    +---- Session Store
 ```
+## Finished creating every file in views needed for the game (08/09/2026)
