@@ -3,6 +3,7 @@ import { requireLogin } from "../middleware/requireLogin.js";
 import {
   showPlayerForm,
   handleCreatePlayer,
+  showGameMenu,
   showProgressMap,
   unlockEnding
 } from "../controllers/playerController.js";
@@ -15,6 +16,12 @@ router.post(
   "/players",
   requireLogin,
   handleCreatePlayer
+);
+
+router.get(
+  "/menu",
+  requireLogin,
+  showGameMenu
 );
 
 router.get(

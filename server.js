@@ -6,6 +6,7 @@ import playerRoutes from "./routes/playerRoutes.js";
 import session from "express-session";
 import MongoStore from "connect-mongo";
 import authRoutes from "./routes/authRoutes.js";
+import storyRoutes from "./routes/storyRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -36,6 +37,7 @@ app.use(
 
 app.use("/", authRoutes);
 app.use("/", playerRoutes);
+app.use("/", storyRoutes);
 
 app.get("/health", (req, res) => {
   res.json({ status: "ok" });
@@ -47,46 +49,6 @@ app.get("/hello", (req, res) => {
 
 app.get("/greetings", (req, res) => {
   res.send("Greetings from the AI development game!");
-});
-
-app.get("/agent", (req, res) => {
-  res.render("partials/agent");
-});
-
-app.get("/productivity", (req, res) => {
-  res.render("partials/agent/productivity");
-});
-
-app.get("/manufacturing", (req, res) => {
-  res.render("partials/agent/productivity/manufacturing");
-});
-
-app.get("/4-1-1-1", (req, res) => {
-  res.render("partials/agent/productivity/manufacturing/4-1-1-1");
-});
-
-app.get("/serve", (req, res) => {
-  res.render("partials/agent/serve");
-});
-
-app.get("/order", (req, res) => {
-  res.render("partials/agent/order");
-});
-
-app.get("/improve", (req, res) => {
-  res.render("partials/agent/improve");
-});
-
-app.get("/assistant", (req, res) => {
-  res.render("partials/assistant");
-});
-
-app.get("/generative", (req, res) => {
-  res.render("partials/generative");
-});
-
-app.get("/pr", (req, res) => {
-  res.render("partials/pr");
 });
 
 async function startServer() {
