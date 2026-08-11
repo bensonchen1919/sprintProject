@@ -1,30 +1,75 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>What domain will your accelerated simulations focus on?</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Domain Will Your Accelerated Simulations Focus On?</title>
+    <link rel="stylesheet" href="/css/output.css">
 </head>
-<body>
+<body class="min-h-screen bg-slate-950 text-slate-100">
     <%- include("../backButton") %>
 
-    <ul>
-        <li>
-            <a href="/social">
-                <strong>1. Social & Economic Systems</strong>
-                <span>Simulate economies, cities, institutions, and large-scale human behavior to forecast outcomes and test policies before they touch the real world</span>
-            </a>
-        </li>
-        <li>
-            <a href="/biological">
-                <strong>2. Biological & Evolutionary Systems</strong>
-                <span>Run accelerated models of organisms, ecosystems, evolution, and molecular biology to search for new drugs, organisms, or ecological interventions</span>
-            </a>
-        </li>
-        <li>
-            <a href="/strategic">
-                <strong>3. Strategic & Adversarial Scenarios</strong>
-                <span>Continuously simulate competition, conflict, negotiation, and game-theoretic situations to explore every plausible move and countermove</span>
-            </a>
-        </li>
-    </ul>
+    <main class="mx-auto max-w-6xl px-4 py-8 sm:px-8 sm:py-12">
+        <header class="mb-10">
+            <p class="mb-2 text-sm font-medium uppercase tracking-widest text-indigo-400">
+                Accelerated Simulations
+            </p>
 
+            <h1 class="text-3xl font-bold tracking-tight sm:text-5xl">
+                What domain will your accelerated simulations focus on?
+            </h1>
+
+            <p class="mt-3 max-w-2xl text-slate-300">
+                Choose the complex systems your AI will simulate and explore.
+            </p>
+        </header>
+
+        <ul class="grid gap-5 sm:grid-cols-2">
+            <li>
+                <a
+                    href="/social"
+                    class="block h-full rounded-xl border border-slate-800 bg-slate-900 p-5 transition hover:-translate-y-1 hover:border-indigo-400 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                >
+                    <strong class="block text-lg text-white">
+                        1. Social &amp; Economic Systems
+                    </strong>
+
+                    <span class="mt-2 block text-sm text-slate-300">
+                        Simulate economies, cities, institutions, and large-scale human behavior to forecast outcomes and test policies before they touch the real world
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="/biological"
+                    class="block h-full rounded-xl border border-slate-800 bg-slate-900 p-5 transition hover:-translate-y-1 hover:border-indigo-400 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                >
+                    <strong class="block text-lg text-white">
+                        2. Biological &amp; Evolutionary Systems
+                    </strong>
+
+                    <span class="mt-2 block text-sm text-slate-300">
+                        Run accelerated models of organisms, ecosystems, evolution, and molecular biology to search for new drugs, organisms, or ecological interventions
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="/strategic"
+                    class="block h-full rounded-xl border border-slate-800 bg-slate-900 p-5 transition hover:-translate-y-1 hover:border-indigo-400 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                >
+                    <strong class="block text-lg text-white">
+                        3. Strategic &amp; Adversarial Scenarios
+                    </strong>
+
+                    <span class="mt-2 block text-sm text-slate-300">
+                        Continuously simulate competition, conflict, negotiation, and game-theoretic situations to explore every plausible move and countermove
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </main>
 </body>
 </html>
