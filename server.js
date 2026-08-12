@@ -65,8 +65,68 @@ app.get("/4-1-1-1", (req, res) => {
   res.render("partials/agent/productivity/manufacturing/4-1-1-1");
 });
 
+app.get("/4-1-1-2", (req, res) => {
+  res.render("partials/agent/productivity/manufacturing/4-1-1-2");
+});
+
+app.get("/4-1-1-3", (req, res) => {
+  res.render("partials/agent/productivity/manufacturing/4-1-1-3");
+});
+
+app.get("/4-1-1-4", (req, res) => {
+  res.render("partials/agent/productivity/manufacturing/4-1-1-4");
+});
+
+app.get("/mining", (req, res) => {
+  res.render("partials/agent/productivity/mining");
+});
+
+app.get("/4-1-2-1", (req, res) => {
+  res.render("partials/agent/productivity/mining/4-1-2-1");
+});
+
+app.get("/4-1-2-2", (req, res) => {
+  res.render("partials/agent/productivity/mining/4-1-2-2");
+});
+
+app.get("/4-1-2-3", (req, res) => {
+  res.render("partials/agent/productivity/mining/4-1-2-3");
+});
+
+app.get("/4-1-2-4", (req, res) => {
+  res.render("partials/agent/productivity/mining/4-1-2-3");
+});
+
+app.get("/research", (req, res) => {
+  res.render("partials/agent/productivity/research");
+});
+
+app.get("/4-1-3-1", (req, res) => {
+  res.render("partials/agent/productivity/research/4-1-3-1");
+});
+
+app.get("/4-1-3-2", (req, res) => {
+  res.render("partials/agent/productivity/research/4-1-3-2");
+});
+
+app.get("/4-1-3-3", (req, res) => {
+  res.render("partials/agent/productivity/research/4-1-3-3");
+});
+
+app.get("/4-1-3-4", (req, res) => {
+  res.render("partials/agent/productivity/research/4-1-3-4");
+});
+
 app.get("/serve", (req, res) => {
   res.render("partials/agent/serve");
+});
+
+app.get("/absolute", (req, res) => {
+  res.render("partials/agent/serve/absolute");
+});
+
+app.get("/utopia", (req, res) => {
+  res.render("partials/agent/serve/utopia");
 });
 
 app.get("/order", (req, res) => {
