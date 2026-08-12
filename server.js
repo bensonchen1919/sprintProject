@@ -125,20 +125,92 @@ app.get("/absolute", (req, res) => {
   res.render("partials/agent/serve/absolute");
 });
 
+app.get("/4-2-2-1", (req, res) => {
+  res.render("partials/agent/serve/absolute/4-2-2-1");
+});
+
+app.get("/4-2-2-2", (req, res) => {
+  res.render("partials/agent/serve/absolute/4-2-2-2");
+});
+
+app.get("/4-2-2-3", (req, res) => {
+  res.render("partials/agent/serve/absolute/4-2-2-3");
+});
+
+app.get("/4-2-2-4", (req, res) => {
+  res.render("partials/agent/serve/absolute/4-2-2-4");
+});
+
 app.get("/utopia", (req, res) => {
   res.render("partials/agent/serve/utopia");
+});
+
+app.get("/4-2-1-1", (req, res) => {
+  res.render("partials/agent/serve/utopia/4-2-1-1");
+});
+
+app.get("/4-2-1-2", (req, res) => {
+  res.render("partials/agent/serve/utopia/4-2-1-2");
+});
+
+app.get("/4-2-1-3", (req, res) => {
+  res.render("partials/agent/serve/utopia/4-2-1-3");
+});
+
+app.get("/4-2-1-4", (req, res) => {
+  res.render("partials/agent/serve/utopia/4-2-1-4");
 });
 
 app.get("/order", (req, res) => {
   res.render("partials/agent/order");
 });
 
+app.get("/enforcement", (req, res) => {
+  res.render("partials/agent/order/enforcement");
+});
+
+app.get("/justice", (req, res) => {
+  res.render("partials/agent/order/justice");
+});
+
 app.get("/improve", (req, res) => {
   res.render("partials/agent/improve");
 });
 
+app.get("/cybernetics", (req, res) => {
+  res.render("partials/agent/improve/cybernetics");
+});
+
+app.get("/infrastructure", (req, res) => {
+  res.render("partials/agent/improve/infrastructure");
+});
+
 app.get("/assistant", (req, res) => {
   res.render("partials/assistant");
+});
+
+app.get("/embodied", (req, res) => {
+  res.render("partials/assistant/embodied");
+});
+
+app.get("/servant", (req, res) => {
+  res.render("partials/assistant/embodied/servant");
+});
+
+app.get("/3-2-1-1", (req, res) => {
+  res.render("partials/assistant/embodied/servant/3-2-1-1");
+});
+
+app.get("/3-2-1-2", (req, res) => {
+  res.render("partials/assistant/embodied/servant/3-2-1-2");
+});
+
+app.get("/3-2-1-3", (req, res) => {
+  res.render("partials/assistant/embodied/servant/3-2-1-3");
+});
+
+app.get("/3-2-1-4", (req, res) => {
+  res.render("partials/assistant/embodied/servant/3-2-1-4");
 });
 
 app.get("/generative", (req, res) => {
