@@ -257,6 +257,46 @@ app.get("/embodied", (req, res) => {
   res.render("partials/assistant/embodied");
 });
 
+app.get("/gonk", (req, res) => {
+  res.render("partials/assistant/embodied/gonk");
+});
+
+app.get("/3-2-2-1", (req, res) => {
+  res.render("partials/assistant/embodied/gonk/3-2-2-1");
+});
+
+app.get("/3-2-2-2", (req, res) => {
+  res.render("partials/assistant/embodied/gonk/3-2-2-2");
+});
+
+app.get("/3-2-2-3", (req, res) => {
+  res.render("partials/assistant/embodied/gonk/3-2-2-3");
+});
+
+app.get("/3-2-2-4", (req, res) => {
+  res.render("partials/assistant/embodied/gonk/3-2-2-4");
+});
+
+app.get("/heavy", (req, res) => {
+  res.render("partials/assistant/embodied/heavy");
+});
+
+app.get("/3-2-3-1", (req, res) => {
+  res.render("partials/assistant/embodied/heavy/3-2-3-1");
+});
+
+app.get("/3-2-3-2", (req, res) => {
+  res.render("partials/assistant/embodied/heavy/3-2-3-2");
+});
+
+app.get("/3-2-3-3", (req, res) => {
+  res.render("partials/assistant/embodied/heavy/3-2-3-3");
+});
+
+app.get("/3-2-3-4", (req, res) => {
+  res.render("partials/assistant/embodied/heavy/3-2-3-4");
+});
+
 app.get("/servant", (req, res) => {
   res.render("partials/assistant/embodied/servant");
 });
@@ -277,8 +317,84 @@ app.get("/3-2-1-4", (req, res) => {
   res.render("partials/assistant/embodied/servant/3-2-1-4");
 });
 
+app.get("/virtual", (req, res) => {
+  res.render("partials/assistant/virtual");
+});
+
+app.get("/companion", (req, res) => {
+  res.render("partials/assistant/virtual/companion");
+});
+
+app.get("/3-1-3-1", (req, res) => {
+  res.render("partials/assistant/virtual/companion/3-1-3-1");
+});
+
+app.get("/3-1-3-2", (req, res) => {
+  res.render("partials/assistant/virtual/companion/3-1-3-2");
+});
+
+app.get("/3-1-3-3", (req, res) => {
+  res.render("partials/assistant/virtual/companion/3-1-3-3");
+});
+
+app.get("/3-1-3-4", (req, res) => {
+  res.render("partials/assistant/virtual/companion/3-1-3-4");
+});
+
+app.get("/household", (req, res) => {
+  res.render("partials/assistant/virtual/household");
+});
+
+app.get("/3-1-2-1", (req, res) => {
+  res.render("partials/assistant/virtual/household/3-1-2-1");
+});
+
+app.get("/3-1-2-2", (req, res) => {
+  res.render("partials/assistant/virtual/household/3-1-2-2");
+});
+
+app.get("/3-1-2-3", (req, res) => {
+  res.render("partials/assistant/virtual/household/3-1-2-3");
+});
+
+app.get("/3-1-2-4", (req, res) => {
+  res.render("partials/assistant/virtual/household/3-1-2-4");
+});
+
+app.get("/pilot", (req, res) => {
+  res.render("partials/assistant/virtual/pilot");
+});
+
+app.get("/3-1-1-1", (req, res) => {
+  res.render("partials/assistant/virtual/pilot/3-1-1-1");
+});
+
+app.get("/3-1-1-2", (req, res) => {
+  res.render("partials/assistant/virtual/pilot/3-1-1-2");
+});
+
+app.get("/3-1-1-3", (req, res) => {
+  res.render("partials/assistant/virtual/pilot/3-1-1-3");
+});
+
+app.get("/3-1-1-4", (req, res) => {
+  res.render("partials/assistant/virtual/pilot/3-1-1-4");
+});
+
 app.get("/generative", (req, res) => {
   res.render("partials/generative");
+});
+
+app.get("/content", (req, res) => {
+  res.render("partials/generative/content");
+});
+
+app.get("/persistence", (req, res) => {
+  res.render("partials/generative/persistence");
+});
+
+app.get("/simulations", (req, res) => {
+  res.render("partials/generative/simulations");
 });
 
 app.get("/pr", (req, res) => {
