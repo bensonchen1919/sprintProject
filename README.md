@@ -61,6 +61,8 @@ npm install
 
 ```text
 MONGODB_URI=mongodb://127.0.0.1:27018/ai-development-game
+SESSION_SECRET=replace-with-a-long-random-secret
+PORT=3000
 ```
 
 3. Create the MongoDB container (first time only):
@@ -79,11 +81,10 @@ If the container already exists, start it with:
 docker start sprint-project-mongo
 ```
 
-4. Build the Tailwind stylesheet:
+### Database Seeding
 
-```bash
-npm run build-css
-```
+No database seed step is required. Users are created through the signup flow, and player records are created through the application after login.
+
 4. Build the Tailwind stylesheet:
 
 ```bash
