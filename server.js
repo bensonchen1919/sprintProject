@@ -169,8 +169,40 @@ app.get("/enforcement", (req, res) => {
   res.render("partials/agent/order/enforcement");
 });
 
+app.get("/4-3-1-1", (req, res) => {
+  res.render("partials/agent/order/enforcement/4-3-1-1");
+});
+
+app.get("/4-3-1-2", (req, res) => {
+  res.render("partials/agent/order/enforcement/4-3-1-2");
+});
+
+app.get("/4-3-1-3", (req, res) => {
+  res.render("partials/agent/order/enforcement/4-3-1-3");
+});
+
+app.get("/4-3-1-4", (req, res) => {
+  res.render("partials/agent/order/enforcement/4-3-1-4");
+});
+
 app.get("/justice", (req, res) => {
   res.render("partials/agent/order/justice");
+});
+
+app.get("/4-3-1-1", (req, res) => {
+  res.render("partials/agent/order/justice/4-3-2-1");
+});
+
+app.get("/4-3-1-2", (req, res) => {
+  res.render("partials/agent/order/justice/4-3-2-2");
+});
+
+app.get("/4-3-1-3", (req, res) => {
+  res.render("partials/agent/order/justice/4-3-2-3");
+});
+
+app.get("/4-3-1-4", (req, res) => {
+  res.render("partials/agent/order/justice/4-3-2-4");
 });
 
 app.get("/improve", (req, res) => {
@@ -181,8 +213,40 @@ app.get("/cybernetics", (req, res) => {
   res.render("partials/agent/improve/cybernetics");
 });
 
+app.get("/4-4-1-1", (req, res) => {
+  res.render("partials/agent/improve/cybernetics/4-4-1-1");
+});
+
+app.get("/4-4-1-2", (req, res) => {
+  res.render("partials/agent/improve/cybernetics/4-4-1-2");
+});
+
+app.get("/4-4-1-3", (req, res) => {
+  res.render("partials/agent/improve/cybernetics/4-4-1-3");
+});
+
+app.get("/4-4-1-4", (req, res) => {
+  res.render("partials/agent/improve/cybernetics/4-4-1-4");
+});
+
 app.get("/infrastructure", (req, res) => {
   res.render("partials/agent/improve/infrastructure");
+});
+
+app.get("/4-4-2-1", (req, res) => {
+  res.render("partials/agent/improve/infrastructure/4-4-2-1");
+});
+
+app.get("/4-4-2-2", (req, res) => {
+  res.render("partials/agent/improve/infrastructure/4-4-2-2");
+});
+
+app.get("/4-4-2-3", (req, res) => {
+  res.render("partials/agent/improve/infrastructure/4-4-2-3");
+});
+
+app.get("/4-4-2-4", (req, res) => {
+  res.render("partials/agent/improve/infrastructure/4-4-2-4");
 });
 
 app.get("/assistant", (req, res) => {
