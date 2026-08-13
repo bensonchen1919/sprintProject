@@ -210,3 +210,7 @@ MongoDB
    +---- Session Store
 ```
 ## Finished creating every file in views needed for the game (08/09/2026)
+
+## Sprint 5 Summary (08/13/2026, Benson)
+### finished the interface
+Finished the full suite of get requests and files needed in views. Updating, modifying, or removing where needed. Also added a button with the function to travel to the previous page.
