@@ -49,6 +49,8 @@ app.get("/greetings", (req, res) => {
   res.send("Greetings from the AI development game!");
 });
 
+/*I added some brackets here so that the chunks of routes can be minimized*/
+/*agent routes*/ {
 app.get("/agent", (req, res) => {
   res.render("partials/agent");
 });
@@ -248,7 +250,9 @@ app.get("/4-4-2-3", (req, res) => {
 app.get("/4-4-2-4", (req, res) => {
   res.render("partials/agent/improve/infrastructure/4-4-2-4");
 });
+}
 
+/*assistant routes*/{
 app.get("/assistant", (req, res) => {
   res.render("partials/assistant");
 });
@@ -380,7 +384,9 @@ app.get("/3-1-1-3", (req, res) => {
 app.get("/3-1-1-4", (req, res) => {
   res.render("partials/assistant/virtual/pilot/3-1-1-4");
 });
+}
 
+/*generative routes*/{
 app.get("/generative", (req, res) => {
   res.render("partials/generative");
 });
@@ -389,17 +395,312 @@ app.get("/content", (req, res) => {
   res.render("partials/generative/content");
 });
 
+app.get("/creation", (req, res) => {
+  res.render("partials/generative/content/creation");
+});
+
+app.get("/1-1-1-1", (req, res) => {
+  res.render("partials/generative/content/creation/1-1-1-1");
+});
+
+app.get("/1-1-1-2", (req, res) => {
+  res.render("partials/generative/content/creation/1-1-1-2");
+});
+
+app.get("/1-1-1-3", (req, res) => {
+  res.render("partials/generative/content/creation/1-1-1-3");
+});
+
+app.get("/1-1-1-4", (req, res) => {
+  res.render("partials/generative/content/creation/1-1-1-4");
+});
+
+app.get("/synthetic", (req, res) => {
+  res.render("partials/generative/content/synthetic");
+});
+
+app.get("/1-1-2-1", (req, res) => {
+  res.render("partials/generative/content/synthetic/1-1-2-1");
+});
+
+app.get("/1-1-2-2", (req, res) => {
+  res.render("partials/generative/content/synthetic/1-1-2-2");
+});
+
+app.get("/1-1-2-3", (req, res) => {
+  res.render("partials/generative/content/synthetic/1-1-2-3");
+});
+
+app.get("/1-1-2-4", (req, res) => {
+  res.render("partials/generative/content/synthetic/1-1-2-4");
+});
+
 app.get("/persistence", (req, res) => {
   res.render("partials/generative/persistence");
+});
+
+app.get("/institutional", (req, res) => {
+  res.render("partials/generative/persistence/institutional");
+});
+
+app.get("/1-2-1-1", (req, res) => {
+  res.render("partials/generative/persistence/institutional/1-2-1-1");
+});
+
+app.get("/1-2-1-2", (req, res) => {
+  res.render("partials/generative/persistence/institutional/1-2-1-2");
+});
+
+app.get("/1-2-1-3", (req, res) => {
+  res.render("partials/generative/persistence/institutional/1-2-1-3");
+});
+
+app.get("/1-2-1-4", (req, res) => {
+  res.render("partials/generative/persistence/institutional/1-2-1-4");
+});
+
+app.get("/legacy", (req, res) => {
+  res.render("partials/generative/persistence/legacy");
+});
+
+app.get("/1-2-2-1", (req, res) => {
+  res.render("partials/generative/persistence/legacy/1-2-2-1");
+});
+
+app.get("/1-2-2-2", (req, res) => {
+  res.render("partials/generative/persistence/legacy/1-2-2-2");
+});
+
+app.get("/1-2-2-3", (req, res) => {
+  res.render("partials/generative/persistence/legacy/1-2-2-3");
+});
+
+app.get("/1-2-2-4", (req, res) => {
+  res.render("partials/generative/persistence/legacy/1-2-2-4");
 });
 
 app.get("/simulations", (req, res) => {
   res.render("partials/generative/simulations");
 });
 
+app.get("/biological", (req, res) => {
+  res.render("partials/generative/simulations/biological");
+});
+
+app.get("/1-3-2-1", (req, res) => {
+  res.render("partials/generative/simulations/biological/1-3-2-1");
+});
+
+app.get("/1-3-2-2", (req, res) => {
+  res.render("partials/generative/simulations/biological/1-3-2-2");
+});
+
+app.get("/1-3-2-3", (req, res) => {
+  res.render("partials/generative/simulations/biological/1-3-2-3");
+});
+
+app.get("/1-3-2-4", (req, res) => {
+  res.render("partials/generative/simulations/biological/1-3-2-4");
+});
+
+app.get("/social", (req, res) => {
+  res.render("partials/generative/simulations/social");
+});
+
+app.get("/1-3-1-1", (req, res) => {
+  res.render("partials/generative/simulations/social/1-3-1-1");
+});
+
+app.get("/1-3-1-2", (req, res) => {
+  res.render("partials/generative/simulations/social/1-3-1-2");
+});
+
+app.get("/1-3-1-3", (req, res) => {
+  res.render("partials/generative/simulations/social/1-3-1-3");
+});
+
+app.get("/1-3-1-4", (req, res) => {
+  res.render("partials/generative/simulations/social/1-3-1-4");
+});
+
+app.get("/strategic", (req, res) => {
+  res.render("partials/generative/simulations/strategic");
+});
+
+app.get("/1-3-3-1", (req, res) => {
+  res.render("partials/generative/simulations/strategic/1-3-3-1");
+});
+
+app.get("/1-3-3-2", (req, res) => {
+  res.render("partials/generative/simulations/strategic/1-3-3-2");
+});
+
+app.get("/1-3-3-3", (req, res) => {
+  res.render("partials/generative/simulations/strategic/1-3-3-3");
+});
+
+app.get("/1-3-3-4", (req, res) => {
+  res.render("partials/generative/simulations/strategic/1-3-3-4");
+});
+}
+
+/*pr routes*/{
 app.get("/pr", (req, res) => {
   res.render("partials/pr");
 });
+
+app.get("/cookie_cutter", (req, res) => {
+  res.render("partials/pr/cookie_cutter");
+});
+
+app.get("/policy", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy");
+});
+
+app.get("/2-2-2-1", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/2-2-2-1");
+});
+
+app.get("/2-2-2-2", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/2-2-2-2");
+});
+
+app.get("/2-2-2-3", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/2-2-2-3");
+});
+
+app.get("/2-2-2-4", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/2-2-2-4");
+});
+
+app.get("/repetitive", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/repetitive");
+});
+
+app.get("/2-2-3-1", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/repetitive/2-2-3-1");
+});
+
+app.get("/2-2-3-2", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/repetitive/2-2-3-2");
+});
+
+app.get("/2-2-3-3", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/repetitive/2-2-3-3");
+});
+
+app.get("/2-2-3-4", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/repetitive/2-2-3-4");
+});
+
+app.get("/safety", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/safety");
+});
+
+app.get("/2-2-1-1", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/safety/2-2-1-1");
+});
+
+app.get("/2-2-1-2", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/safety/2-2-1-2");
+});
+
+app.get("/2-2-1-3", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/safety/2-2-1-3");
+});
+
+app.get("/2-2-1-4", (req, res) => {
+  res.render("partials/pr/cookie_cutter/policy/safety/2-2-1-4");
+});
+
+app.get("/predictive", (req, res) => {
+  res.render("partials/pr/predictive");
+})
+
+app.get("/forecasting", (req, res) => {
+  res.render("partials/pr/predictive/forecasting");
+})
+
+app.get("/2-1-1-1", (req, res) => {
+  res.render("partials/pr/predictive/forecasting/2-1-1-1");
+})
+
+app.get("/2-1-1-2", (req, res) => {
+  res.render("partials/pr/predictive/forecasting/2-1-1-2");
+})
+
+app.get("/2-1-1-3", (req, res) => {
+  res.render("partials/pr/predictive/forecasting/2-1-1-3");
+})
+
+app.get("/2-1-1-4", (req, res) => {
+  res.render("partials/pr/predictive/forecasting/2-1-1-4");
+})
+
+app.get("/structure", (req, res) => {
+  res.render("partials/pr/structure");
+})
+
+app.get("/economy", (req, res) => {
+  res.render("partials/pr/structure/economy");
+})
+
+app.get("/2-3-2-1", (req, res) => {
+  res.render("partials/pr/structure/economy/2-3-2-1");
+})
+
+app.get("/2-3-2-2", (req, res) => {
+  res.render("partials/pr/structure/economy/2-3-2-2");
+})
+
+app.get("/2-3-2-3", (req, res) => {
+  res.render("partials/pr/structure/economy/2-3-2-3");
+})
+
+app.get("/2-3-2-4", (req, res) => {
+  res.render("partials/pr/structure/economy/2-3-2-4");
+})
+
+app.get("/firm", (req, res) => {
+  res.render("partials/pr/structure/firm");
+})
+
+app.get("/2-3-3-1", (req, res) => {
+  res.render("partials/pr/structure/firm/2-3-3-1");
+})
+
+app.get("/2-3-3-2", (req, res) => {
+  res.render("partials/pr/structure/firm/2-3-3-2");
+})
+
+app.get("/2-3-3-3", (req, res) => {
+  res.render("partials/pr/structure/firm/2-3-3-3");
+})
+
+app.get("/2-3-3-4", (req, res) => {
+  res.render("partials/pr/structure/firm/2-3-3-4");
+})
+
+app.get("/governance", (req, res) => {
+  res.render("partials/pr/structure/governance");
+})
+
+app.get("/2-3-1-1", (req, res) => {
+  res.render("partials/pr/structure/governance/2-3-1-1");
+})
+
+app.get("/2-3-1-2", (req, res) => {
+  res.render("partials/pr/structure/governance/2-3-1-2");
+})
+
+app.get("/2-3-1-3", (req, res) => {
+  res.render("partials/pr/structure/governance/2-3-1-3");
+})
+
+app.get("/2-3-1-4", (req, res) => {
+  res.render("partials/pr/structure/governance/2-3-1-4");
+})
+}
 
 async function startServer() {
   try {
