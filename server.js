@@ -6,6 +6,7 @@ import playerRoutes from "./routes/playerRoutes.js";
 import session from "express-session";
 import MongoStore from "connect-mongo";
 import authRoutes from "./routes/authRoutes.js";
+import storyRoutes from "./routes/storyRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -36,6 +37,7 @@ app.use(
 
 app.use("/", authRoutes);
 app.use("/", playerRoutes);
+app.use("/", storyRoutes);
 
 app.get("/health", (req, res) => {
   res.json({ status: "ok" });
@@ -96,7 +98,7 @@ app.get("/4-1-2-3", (req, res) => {
 });
 
 app.get("/4-1-2-4", (req, res) => {
-  res.render("partials/agent/productivity/mining/4-1-2-3");
+  res.render("partials/agent/productivity/mining/4-1-2-4");
 });
 
 app.get("/research", (req, res) => {
@@ -191,19 +193,19 @@ app.get("/justice", (req, res) => {
   res.render("partials/agent/order/justice");
 });
 
-app.get("/4-3-1-1", (req, res) => {
+app.get("/4-3-2-1", (req, res) => {
   res.render("partials/agent/order/justice/4-3-2-1");
 });
 
-app.get("/4-3-1-2", (req, res) => {
+app.get("/4-3-2-2", (req, res) => {
   res.render("partials/agent/order/justice/4-3-2-2");
 });
 
-app.get("/4-3-1-3", (req, res) => {
+app.get("/4-3-2-3", (req, res) => {
   res.render("partials/agent/order/justice/4-3-2-3");
 });
 
-app.get("/4-3-1-4", (req, res) => {
+app.get("/4-3-2-4", (req, res) => {
   res.render("partials/agent/order/justice/4-3-2-4");
 });
 

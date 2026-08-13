@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Run-off Ending</title>
+    <title><%= title %></title>
     <link rel="stylesheet" href="/css/output.css">
 </head>
+
 <body class="min-h-screen bg-slate-950 text-slate-100">
     <main class="mx-auto flex min-h-screen max-w-3xl items-center px-4 py-10 sm:px-8">
-        <section class="w-full rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-lg sm:p-10">
-
+        <section
+            class="w-full rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-lg sm:p-10"
+        >
             <p class="mb-2 text-sm font-medium uppercase tracking-widest text-indigo-400">
                 Ending Reached
             </p>
 
             <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
-                Run-off Ending
+                <%= title %>
             </h1>
 
-            <p class="mt-5 leading-7 text-slate-300">
-                Without any constraints or specifications, the factory machine continued to produce endlessly.
-                Eventually, after running out of resources to put into the factory, it was forced to shut down until further notice.
+            <p class="mt-2 text-sm text-slate-400">
+                Ending ID: <%= endingId %>
+            </p>
+
+            <p class="mt-6 leading-7 text-slate-300">
+                <%= description %>
             </p>
 
             <div class="mt-8 flex flex-wrap gap-3">
@@ -33,10 +38,10 @@
                 </button>
 
                 <a
-                    href="/"
+                    href="/menu"
                     class="rounded-lg bg-indigo-600 px-4 py-3 font-semibold text-white transition hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                 >
-                    Start Again
+                    Back to AI Menu
                 </a>
             </div>
         </section>

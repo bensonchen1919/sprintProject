@@ -15,6 +15,8 @@ export async function handleCreatePlayer(req, res) {
   try {
     const player = await createPlayer(req.body.name, req.session.user.id);
 
+    req.session.playerId = player._id.toString();
+
     res.render("start", {
       player
     });
@@ -23,6 +25,20 @@ export async function handleCreatePlayer(req, res) {
       error: error.message,
       previousName: req.body.name ?? ""
     });
+  }
+}
+
+export async function showGameMenu(req, res) {
+  try {
+    const player = await getPlayerById(
+      req.session.playerId
+    );
+
+    res.render("start", {
+      player
+    });
+  } catch (error) {
+    res.redirect("/");
   }
 }
 
